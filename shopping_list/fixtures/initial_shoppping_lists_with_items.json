@@ -1,0 +1,48 @@
+[
+    {
+        "model": "shopping_list.shoppinglist",
+        "pk": "52e0b1b6-c9da-4eb8-8b5b-e8770b886e1d",
+        "fields": {
+            "name": "List 4"
+        }
+    },
+    {
+        "model": "shopping_list.shoppinglist",
+        "pk": "836afab2-00ff-4e0b-8cf7-27065068468c",
+        "fields": {
+            "name": "List 3"
+        }
+    },
+    {
+        "model": "shopping_list.shoppinglist",
+        "pk": "b32efa25-d8f8-4c2a-b1ec-b9894564b5dc",
+        "fields": {
+            "name": "List 2"
+        }
+    },
+    {
+        "model": "shopping_list.shoppinglist",
+        "pk": "e9316c26-6fd7-4268-9944-0a2050c33135",
+        "fields": {
+            "name": "List 1"
+        }
+    },
+    {
+        "model": "shopping_list.shoppingitem",
+        "pk": "c798ae62-eeaa-4560-b387-b95868d2c6dd",
+        "fields": {
+            "name": "Tomato",
+            "purchased": false,
+            "shopping_list": "52e0b1b6-c9da-4eb8-8b5b-e8770b886e1d"
+        }
+    },
+    {
+        "model": "shopping_list.shoppingitem",
+        "pk": "da90c07f-8c84-493a-8812-52697dd02e92",
+        "fields": {
+            "name": "Potato",
+            "purchased": false,
+            "shopping_list": "52e0b1b6-c9da-4eb8-8b5b-e8770b886e1d"
+        }
+    }
+]
