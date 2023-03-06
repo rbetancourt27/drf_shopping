@@ -17,16 +17,17 @@ class ShoppingItemSerializer(serializers.ModelSerializer):
 
 
 class ShoppingListSerializer(serializers.ModelSerializer):
-    shopping_items = ShoppingItemSerializer(many=True)
+    shopping_items = ShoppingItemSerializer(many=True, required=False)
 
     class Meta:
         model = ShoppingList
         fields = ["id", "name", "shopping_items"]
 
     def create(self, validated_data):
-        items_data = validated_data.pop("shopping_items")
+        items_data = {}
+        if "shopping_items" in validated_data:
+            items_data = validated_data.pop("shopping_items")
         shopping_list = ShoppingList.objects.create(**validated_data)
-
         for item_data in items_data:
             ShoppingItem.objects.create(shopping_list=shopping_list, **item_data)
 
