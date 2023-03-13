@@ -55,13 +55,13 @@ def test_shopping_list_is_retrieved_by_id(api_client, shopping_list):
 def test_shopping_list_includes_only_corresponding_items(api_client, shopping_list):
 
     shopping_list_1 = shopping_list(name="Groceries")
-    another_shopping_list = shopping_list(name="Books")
+    shopping_list_2 = shopping_list(name="Books")
 
     ShoppingItem.objects.create(
         shopping_list=shopping_list_1, name="Eggs", purchased=False
     )
     ShoppingItem.objects.create(
-        shopping_list=another_shopping_list, name="The seven sisters", purchased=False
+        shopping_list=shopping_list_2, name="The seven sisters", purchased=False
     )
 
     url = reverse("shopping-list-detail", args=[shopping_list_1.id])
